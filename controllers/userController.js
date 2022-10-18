@@ -36,7 +36,7 @@ export const login = async (req, res) => {
         .cookie("jwt", token, {
           httpOnly: true,
           secure: true, // we are not using https
-          sameSite: true,
+          sameSite: false,
         })
         .json({ message: "You are authenticated, welcome!" });
     } else {
