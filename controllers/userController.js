@@ -33,7 +33,11 @@ export const login = async (req, res) => {
 
       return res
         .status(200)
-        .cookie("jwt", token)
+        .cookie("jwt", token, {
+          secure: true,
+          httpOnly: true,
+          sameSite: true,
+        })
         .json({ message: "You are authenticated, welcome!" });
     } else {
       return res.status(400).json({ message: "No access granted" });
