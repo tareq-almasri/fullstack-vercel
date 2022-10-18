@@ -10,7 +10,7 @@ export default function Login() {
     const formData = new FormData(event.target);
 
     try {
-      await axios.post(
+     const res= await axios.post(
         "/api/users/login",
         {
           email: formData.get("email"),
@@ -20,6 +20,7 @@ export default function Login() {
           withCredentials: true, // tells frontend to expect a http-only cookie
         }
       );
+      console.log(res.data)
       setError("");
     } catch (error) {
       setError(error.response.data.message);
