@@ -28,7 +28,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://fullstack-vercel.vercel.app/",
   })
   // cors({
   //   origin: "http://localhost:3000", // we can also specify the domain we will be connecting from
