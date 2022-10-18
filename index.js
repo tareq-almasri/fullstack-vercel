@@ -45,9 +45,7 @@ configureJwtStrategy(passport);
 
 //connecting to the database
 mongoose
-  .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}`
-  )
+  .connect(process.env.DB_URL)
   .then(() => {
     console.log("Database connected! 😃");
   })

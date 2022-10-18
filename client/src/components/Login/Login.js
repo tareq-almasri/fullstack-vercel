@@ -11,7 +11,7 @@ export default function Login() {
 
     try {
       await axios.post(
-        "http://localhost:3001/api/users/login",
+        "/api/users/login",
         {
           email: formData.get("email"),
           password: formData.get("password"),

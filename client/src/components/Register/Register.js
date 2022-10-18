@@ -12,7 +12,7 @@ export default function Register() {
     const formData = new FormData(event.target);
 
     try {
-      await axios.post("http://localhost:3001/api/users/create", {
+      await axios.post("/api/users/create", {
         firstName: formData.get("firstName"),
         lastName: formData.get("lastName"),
         userName: formData.get("userName"),
