@@ -33,5 +33,3 @@
 - 8. go to [vercel.com](https://vercel.com/) log into your account (or make a new one) link it to your github, then choose the repo of your fullstack project which you want to deploy and hit deploy.
 
 - 9. in the dashboard of your vercel project go to settings and add the environment variable under 'Environment Variables'
-
-- edit your domain how you like (you have to keep the .vercel.app at the end) then copy it and add it to your cors origin in your local server (index.js) then git add, commit and push and it will be deployed again automatically since you already linked the github repo to your project on vercel
